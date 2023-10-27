@@ -1,22 +1,45 @@
+import { useState } from "react";
+
 export default function NavBar({navState}:any) {
     return (
         <>
         <nav>
             <div id="navbar" className={navState}>
-            <a className="nav-link" href="#">
-                <h2 className="nav-link-label font">Home</h2>
-                <img className="nav-link-image" src="https://images.unsplash.com/photo-1666091863721-54331a5db52d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" />
-            </a>
-            <a className="nav-link" href="#">
-                <h2 className="nav-link-label font">League</h2>
-                <img className="nav-link-image" src="https://images.unsplash.com/photo-1666055642230-1595470b98fd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=995&q=80" />
-            </a>
-            <a className="nav-link" href="#">
-                <h2 className="nav-link-label font">Submit</h2>
-                <img className="nav-link-image" src="https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" />
-            </a>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
+            <Card></Card>
             </div>
         </nav>
         </>
+    )
+}
+
+function Card() {
+    const cardStates = ["card__inner","card__inner is-flipped"];
+    const [Index,setIndex] = useState(0);
+    function toggleCard() {
+        setIndex((Index +1) % 2);
+    }
+    let state = cardStates[Index]
+    return (
+        <div className="card">
+            <div className={state} onClick={toggleCard}>
+                <div className="card__face card__face--front">
+                    <h2>Module Title</h2>
+                </div>
+                <div className="card__face card__face--back">
+                    <div className="card__content">
+                        <div className="card__header">
+                            <h2>Module Title</h2>
+                        </div>
+                        <div className="card__body">
+                            <h3>Contents</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
