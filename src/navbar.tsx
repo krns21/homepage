@@ -36,7 +36,7 @@ function Card(props :CardProps) {
                 <div className="card__face card__face--front">
                     <h2>{props.ModuleName}</h2>
                     <h3>{props.ModuleCode}</h3>
-                    <a href={props.Notes} className="button" download><img src="%PUBLIC_URL%/PDF_icon.svg" alt="Download Notes"></img><i className="fa fa-download"></i></a>
+                    <a href={props.Notes} className="button" download><img src="" alt="Download Notes"></img><i className="fa fa-download"></i></a>
                 </div>
                 <div className="card__face card__face--back">
                     <div className="card__content">
