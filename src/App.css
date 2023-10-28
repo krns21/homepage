@@ -64,7 +64,7 @@ nav {
     display: flex;
     gap: clamp(1rem, 2vw, 2rem);
     margin-top: clamp(2rem, 2vw, 3rem);
-    padding: 0rem clamp(1rem, 2vw, 2rem);
+    padding: 1rem ;
     transform: translateY(70%) scale(0.9);
     transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
 }
@@ -73,27 +73,8 @@ nav {
     transform: translateY(0%) scale(1);
 }
 
-div > .nav-link {
-    text-decoration: none;
-}
-
-div > .nav-link > .nav-link-label {
-    color: white;
-    font-size: 1.25rem;
-    margin: 0rem;
-    text-transform: uppercase;
-}
-
-div > .nav-link > .nav-link-image {
-    width: max(20vw, 400px);
-    aspect-ratio: 1.8 / 1;
-    border-radius: 0.5rem;
-    margin-top: 0.75rem;
-    object-fit: cover;
-}
-
 .card {
-    margin: 15px;
+    margin: 0px;
     min-width: 400px;
     width: 400px;
     height: 250px;
@@ -128,15 +109,30 @@ div > .nav-link > .nav-link-image {
   .card__face--front {
     background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
   
+  img {
+    display: block;
+    width: 5rem;
+    height: 5.5rem;
+    text-align: center;
+  }
   .card__face--front h2 {
+    margin: 1rem auto 0rem auto;
+    text-align: center;
     color: #FFF;
-    font-size: 25px;
+    font-size: 27px;
   }
   
+  .card__face--front h3 {
+    color: #FFF;
+    margin: 0.5rem auto 2rem auto;
+    text-align: center;
+  }
+
   .card__face--back {
     background-color: var(--light);
     transform: rotateY(180deg);
@@ -180,10 +176,12 @@ div > .nav-link > .nav-link-image {
   
   .card__body h3 {
     color: var(--dark);
+    font-family: 'Courier New', Courier, monospace;
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 15px;
-    text-align: center;
+    text-transform: uppercase;
+    margin:0.3rem auto 1rem 0.3rem;
+    text-align: left;
   }
   
   .card__body p {
