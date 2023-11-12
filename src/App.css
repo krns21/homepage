@@ -63,7 +63,7 @@ nav {
 #navbar {
     display: flex;
     gap: clamp(1rem, 2vw, 2rem);
-    margin-top: clamp(2rem, 2vw, 3rem);
+    margin-top: clamp(3rem, 6vh, 10vh);
     padding: 1rem ;
     transform: translateY(70%) scale(0.9);
     transition: transform 500ms cubic-bezier(.13,.53,.38,.97);
