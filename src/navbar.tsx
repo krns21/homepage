@@ -36,7 +36,7 @@ function Card(props :CardProps) {
                 <div className="card__face card__face--front">
                     <h2>{props.ModuleName}</h2>
                     <h3>{props.ModuleCode}</h3>
-                    <a href={props.Notes} className="button" download><img src="" alt="Download Notes"></img><i className="fa fa-download"></i></a>
+                    <a href={props.Notes} className="button" download><img src="https://img.freepik.com/premium-vector/pdf-file-icon-download-document-button-vector-flat_833641-399.jpg?w=360" width="50" alt="Download Notes"></img></a>
                 </div>
                 <div className="card__face card__face--back">
                     <div className="card__content">
@@ -44,7 +44,10 @@ function Card(props :CardProps) {
                             <h2>{props.ModuleName}</h2>
                         </div>
                         <div className="card__body">
-                            <h3>Chapters</h3>
+                            <h4>Topics</h4>
+                            <ul>
+                                {props.Chapters.map((x)=> <li>{x}</li>)}
+                            </ul>
                         </div>
                     </div>
                 </div>

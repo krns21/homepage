@@ -174,13 +174,13 @@ nav {
     padding: 3px;
   }
   
-  .card__body h3 {
+  .card__body h4 {
     color: var(--dark);
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 24px;
-    font-weight: 600;
+    font-family: 'Courier New Bold', Courier, monospace;
+    font-size: 20px;
+    font-weight: 1000;
     text-transform: uppercase;
-    margin:0.3rem auto 1rem 0.3rem;
+    margin:0.3rem 0.5rem 0% 0.5rem;
     text-align: left;
   }
   
